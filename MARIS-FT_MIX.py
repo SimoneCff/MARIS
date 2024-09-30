@@ -7,7 +7,7 @@ from transformers import AutoProcessor, PaliGemmaForConditionalGeneration
 import torch
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
-import big_vision.evaluators.proj.paligemma.transfers.segmentation as segeval
+import big_vision.big_vision.evaluators.proj.paligemma.transfers.segmentation as segeval
 
 """                  
 MARIS Main Script:
