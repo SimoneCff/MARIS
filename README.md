@@ -25,5 +25,6 @@ The dataset have to beein in paligemma format and modify the value inside the sc
   python3 fine-tune.py
   ```
 The dataset used for our cases: https://universe.roboflow.com/merg/coral-bamqm/dataset/2
+
 For transform the fine-tuned model into the huggin-face format use the script from this repo.
 Link : https://github.com/huggingface/transformers/blob/main/src/transformers/models/paligemma/convert_paligemma_weights_to_hf.py
