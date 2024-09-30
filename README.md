@@ -16,4 +16,4 @@ the system’s adaptability allows it to be utilized in various marine research 
   python3 MARIS-FT_MIX.py --image IMAGE_PATH --object object (to detect & segment)
   ```
   Access Paligemma-3b-mix model:
-  Link: https://www.kaggle.com/models/google/paligemma
+  Link: https://huggingface.co/google/paligemma-3b-mix-448
