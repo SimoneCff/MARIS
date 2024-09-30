@@ -17,3 +17,13 @@ the system’s adaptability allows it to be utilized in various marine research 
   ```
   Access Paligemma-3b-mix model:
   Link: https://huggingface.co/google/paligemma-3b-mix-448
+
+## Fine-Tune The Model
+For Fine-Tuning the model you can use the fine-tuning.py file for training from a coral dataset.
+The dataset have to beein in paligemma format and modify the value inside the script.
+ ```bash
+  python3 fine-tune.py
+  ```
+The dataset used for our cases: https://universe.roboflow.com/merg/coral-bamqm/dataset/2
+For transform the fine-tuned model into the huggin-face format use the script from this repo.
+Link : https://github.com/huggingface/transformers/blob/main/src/transformers/models/paligemma/convert_paligemma_weights_to_hf.py
