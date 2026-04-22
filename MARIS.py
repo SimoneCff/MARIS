@@ -18,13 +18,15 @@ dtype = torch.bfloat16
 local_model_path = "./model"
 target_size = (448, 448)
 
-device = "mps" if torch.backends.mps.is_available() else "cpu"
+device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
 print(f"Device Used : {device}")
 model = PaliGemmaForConditionalGeneration.from_pretrained(local_model_path, torch_dtype=dtype, device_map=device, revision="bfloat16").eval()
 processor = AutoProcessor.from_pretrained(local_model_path)
 
 def request(image, text_input):
     try:  
+        if not text_input.startswith("<image>"):
+            text_input = "<image>" + text_input
         model_inputs = processor(text=text_input, images=image, return_tensors="pt").to(model.device)
         input_len = model_inputs["input_ids"].shape[-1]
 
